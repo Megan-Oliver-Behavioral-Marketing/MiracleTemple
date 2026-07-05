@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miracle Temple</title>
+  <title>Home | Miracle Temple</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -28,7 +28,6 @@
       overflow-x: hidden;
     }
 
-    /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -41,6 +40,7 @@
       font-family: 'Cinzel', serif;
       font-size: 1.15rem; letter-spacing: 0.15em;
       color: var(--gold);
+      text-decoration: none;
     }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
@@ -48,8 +48,10 @@
       font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--gold-light); text-decoration: none;
       transition: color 0.3s;
+      padding-bottom: 4px;
     }
     .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
     .nav-cta {
       font-family: 'Cinzel', serif;
       font-size: 0.75rem; letter-spacing: 0.12em;
@@ -59,7 +61,41 @@
     }
     .nav-cta:hover { background: var(--gold-light); }
 
-    /* ── HERO ── */
+    .page-hero {
+      min-height: 50vh;
+      background: var(--deep);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; text-align: center;
+      padding: 10rem 2rem 4rem;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.06) 0%, transparent 60%);
+    }
+    .hero-eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+      position: relative; z-index: 1;
+    }
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 700; line-height: 1.1;
+      color: #fff; letter-spacing: 0.03em;
+      position: relative; z-index: 1;
+    }
+    .hero-title span { color: var(--gold); }
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      font-style: italic; color: var(--gold-light);
+      margin-top: 1rem; max-width: 560px;
+      position: relative; z-index: 1;
+    }
+
     .hero {
       min-height: 100vh;
       background: var(--deep);
@@ -73,43 +109,21 @@
         radial-gradient(ellipse 60% 60% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 70%),
         radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.06) 0%, transparent 60%);
     }
-    /* Cross SVG watermark */
     .hero-cross {
       position: absolute; top: 50%; left: 50%;
       transform: translate(-50%, -50%);
       width: 500px; height: 500px;
       opacity: 0.04;
     }
-    .hero-eyebrow {
-      font-family: 'Lato', sans-serif;
-      font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1.8rem;
-      animation: fadeUp 1s ease both;
-    }
-    .hero-title {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(3rem, 8vw, 7rem);
-      font-weight: 700; line-height: 1.05;
-      color: #fff; letter-spacing: 0.04em;
-      animation: fadeUp 1s 0.15s ease both;
-    }
-    .hero-title span { color: var(--gold); }
-    .hero-sub {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      font-style: italic; color: var(--gold-light);
-      margin-top: 1.2rem; max-width: 540px;
-      animation: fadeUp 1s 0.3s ease both;
-    }
     .hero-verse {
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.95rem; color: var(--muted);
       letter-spacing: 0.05em; margin-top: 0.6rem;
-      animation: fadeUp 1s 0.4s ease both;
+      position: relative; z-index: 1;
     }
     .hero-actions {
       display: flex; gap: 1.2rem; margin-top: 3rem;
-      animation: fadeUp 1s 0.5s ease both;
+      position: relative; z-index: 1;
     }
     .btn-primary {
       font-family: 'Cinzel', serif;
@@ -132,7 +146,6 @@
     .hero-scroll {
       position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-      animation: fadeUp 1s 0.8s ease both;
     }
     .hero-scroll span {
       font-size: 0.65rem; letter-spacing: 0.3em; text-transform: uppercase;
@@ -143,7 +156,6 @@
       animation: scrollPulse 2s infinite;
     }
 
-    /* ── DIVIDER ── */
     .gold-divider {
       display: flex; align-items: center; gap: 1.2rem;
       justify-content: center; margin: 0 auto 3rem;
@@ -153,7 +165,6 @@
     }
     .gold-divider svg { width: 18px; height: 18px; fill: var(--gold); }
 
-    /* ── WELCOME ── */
     .welcome {
       background: var(--cream);
       padding: 7rem 2rem;
@@ -161,9 +172,7 @@
       max-width: 1100px; margin: 0 auto;
       align-items: center;
     }
-    .welcome-img {
-      position: relative;
-    }
+    .welcome-img { position: relative; }
     .welcome-img-box {
       width: 100%; aspect-ratio: 4/5;
       background: linear-gradient(135deg, #1C1610 0%, #2C2010 100%);
@@ -184,7 +193,6 @@
       border: 2px solid var(--gold);
       z-index: -1;
     }
-    .welcome-content { }
     .section-label {
       font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase;
       color: var(--gold); margin-bottom: 1rem; display: block;
@@ -201,7 +209,6 @@
       color: var(--muted); margin-bottom: 1.2rem;
     }
 
-    /* ── SERVICES TIMES ── */
     .services-times {
       background: var(--deep);
       padding: 6rem 2rem;
@@ -230,9 +237,7 @@
       font-size: 1.25rem; color: #fff;
       font-weight: 600; margin-bottom: 0.5rem;
     }
-    .time-hour {
-      font-size: 0.85rem; color: var(--muted); letter-spacing: 0.05em;
-    }
+    .time-hour { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.05em; }
     .time-tag {
       display: inline-block; margin-top: 0.8rem;
       font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
@@ -240,7 +245,6 @@
       padding: 0.3rem 0.7rem;
     }
 
-    /* ── MINISTRIES ── */
     .ministries {
       padding: 7rem 2rem;
       max-width: 1100px; margin: 0 auto;
@@ -262,7 +266,6 @@
     }
     .ministry-card:hover::before { height: 100%; }
     .ministry-card:hover { border-color: rgba(201,168,76,0.5); }
-    .ministry-icon { font-size: 2rem; margin-bottom: 1.2rem; }
     .ministry-title {
       font-family: 'Cinzel', serif;
       font-size: 1rem; color: var(--deep); margin-bottom: 0.7rem;
@@ -272,7 +275,6 @@
       font-size: 1.05rem; line-height: 1.7; color: var(--text);
     }
 
-    /* ── SCRIPTURE BANNER ── */
     .scripture-banner {
       background: var(--gold);
       padding: 5rem 2rem; text-align: center;
@@ -290,7 +292,6 @@
       color: var(--gold-dark);
     }
 
-    /* ── UPCOMING EVENTS ── */
     .events {
       padding: 7rem 2rem;
       background: var(--deep); text-align: center;
@@ -333,23 +334,16 @@
       padding: 0.35rem 0.8rem; white-space: nowrap;
     }
 
-    /* ── GIVE / CONNECT ── */
     .give-connect {
       padding: 7rem 2rem;
       max-width: 900px; margin: 0 auto;
       display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
       text-align: center;
     }
-    .give-box {
-      background: var(--deep);
-      padding: 3.5rem 2.5rem;
-    }
+    .give-box { background: var(--deep); padding: 3.5rem 2.5rem; }
     .give-box .section-title { color: #fff; font-size: 1.6rem; }
     .give-box .section-body { color: var(--muted); font-size: 1rem; }
-    .connect-box {
-      background: var(--gold);
-      padding: 3.5rem 2.5rem;
-    }
+    .connect-box { background: var(--gold); padding: 3.5rem 2.5rem; }
     .connect-box .section-title { color: var(--deep); font-size: 1.6rem; }
     .connect-box .section-body { color: var(--gold-dark); font-size: 1rem; }
     .btn-dark {
@@ -371,7 +365,6 @@
     }
     .btn-light:hover { background: var(--deep); color: var(--gold); }
 
-    /* ── FOOTER ── */
     footer {
       background: #080604;
       padding: 4rem 2rem 2rem;
@@ -417,7 +410,6 @@
     }
     .footer-socials a:hover { background: var(--gold); color: var(--deep); }
 
-    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -427,7 +419,6 @@
       50% { opacity: 1; transform: scaleY(1.2); }
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
@@ -442,21 +433,13 @@
   </style>
 </head>
 <body>
-
-<!-- NAV -->
 <nav>
-  <span class="nav-logo">✦ Miracle Temple</span>
+  <a href="index.html" class="nav-logo">&#10022; Miracle Temple</a>
   <ul class="nav-links">
-    <li><a href="#welcome">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#ministries">Ministries</a></li>
-    <li><a href="#events">Events</a></li>
-    <li><a href="#give">Give</a></li>
+    <li><a href="index.html" class="active">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="ministries.html">Ministries</a></li><li><a href="events.html">Events</a></li><li><a href="give.html">Give</a></li>
   </ul>
-  <a href="#connect" class="nav-cta">Plan a Visit</a>
+  <a href="give.html" class="nav-cta">Plan a Visit</a>
 </nav>
-
-<!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-bg"></div>
   <svg class="hero-cross" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -466,10 +449,10 @@
   <p class="hero-eyebrow">Welcome to</p>
   <h1 class="hero-title">Miracle<br/><span>Temple</span></h1>
   <p class="hero-sub">Where Faith is Ignited and Lives are Transformed</p>
-  <p class="hero-verse">John 11:40 — "Did I not tell you that if you believe, you will see the glory of God?"</p>
+  <p class="hero-verse">John 11:40 &mdash; "Did I not tell you that if you believe, you will see the glory of God?"</p>
   <div class="hero-actions">
-    <a href="#services" class="btn-primary">Join Us Sunday</a>
-    <a href="#welcome" class="btn-outline">Learn More</a>
+    <a href="services.html" class="btn-primary">Join Us Sunday</a>
+    <a href="about.html" class="btn-outline">Learn More</a>
   </div>
   <div class="hero-scroll">
     <div class="scroll-line"></div>
@@ -477,7 +460,6 @@
   </div>
 </section>
 
-<!-- WELCOME -->
 <section class="welcome" id="welcome">
   <div class="welcome-img">
     <div class="welcome-img-box">
@@ -494,179 +476,45 @@
   </div>
   <div class="welcome-content">
     <span class="section-label">Our Story</span>
-    <h2 class="section-title">A House Built on Faith, Love & Purpose</h2>
-    <p class="section-body">For over three decades, Miracle Temple has stood as a beacon of hope in our community — a place where the broken find healing, the lost find direction, and the faithful find family.</p>
-    <p class="section-body">Under the leadership of Senior Pastor Emmanuel & Pastor Grace Osei, we are committed to building disciples who carry the love of God into every corner of the world.</p>
-    <div class="gold-divider" style="margin: 1.5rem 0; justify-content: flex-start;">
-      <svg viewBox="0 0 20 20"><path d="M10 2L10 18M2 10L18 10" stroke="#C9A84C" stroke-width="1.5" fill="none"/></svg>
-    </div>
-    <a href="#connect" class="btn-primary">Meet Our Pastors</a>
+    <h2 class="section-title">A House Built on Faith, Love &amp; Purpose</h2>
+    <p class="section-body">For over three decades, Miracle Temple has stood as a beacon of hope in our community &mdash; a place where the broken find healing, the lost find direction, and the faithful find family.</p>
+    <a href="about.html" class="btn-primary">Meet Our Pastors</a>
   </div>
 </section>
 
-<!-- SERVICE TIMES -->
-<section class="services-times" id="services">
-  <span class="section-label" style="color:var(--gold)">Join Us In Person or Online</span>
-  <h2 class="section-title">Service Times</h2>
-  <div class="gold-divider" style="margin-top:1rem;">
-    <svg viewBox="0 0 20 20"><path d="M10 2L10 18M2 10L18 10" stroke="#C9A84C" stroke-width="1.5" fill="none"/></svg>
-  </div>
-  <div class="times-grid">
-    <div class="time-card">
-      <div class="time-day">Sunday</div>
-      <div class="time-name">First Service</div>
-      <div class="time-hour">7:30 AM – 9:30 AM</div>
-      <span class="time-tag">In-Person & Online</span>
-    </div>
-    <div class="time-card">
-      <div class="time-day">Sunday</div>
-      <div class="time-name">Second Service</div>
-      <div class="time-hour">10:00 AM – 12:00 PM</div>
-      <span class="time-tag">In-Person & Online</span>
-    </div>
-    <div class="time-card">
-      <div class="time-day">Wednesday</div>
-      <div class="time-name">Prayer & Power</div>
-      <div class="time-hour">6:30 PM – 8:00 PM</div>
-      <span class="time-tag">Midweek Revival</span>
-    </div>
-    <div class="time-card">
-      <div class="time-day">Friday</div>
-      <div class="time-name">Night of Miracles</div>
-      <div class="time-hour">7:00 PM – 9:00 PM</div>
-      <span class="time-tag">Monthly</span>
-    </div>
-  </div>
-</section>
-
-<!-- MINISTRIES -->
-<section class="ministries" id="ministries">
-  <span class="section-label">Get Involved</span>
-  <h2 class="section-title">Our Ministries</h2>
-  <div class="gold-divider">
-    <svg viewBox="0 0 20 20"><path d="M10 2L10 18M2 10L18 10" stroke="#C9A84C" stroke-width="1.5" fill="none"/></svg>
-  </div>
-  <div class="ministry-grid">
-    <div class="ministry-card">
-      <div class="ministry-title">Prayer Ministry</div>
-      <p class="ministry-desc">Intercession is our foundation. Our prayer warriors meet daily to stand in the gap for our congregation and community.</p>
-    </div>
-    <div class="ministry-card">
-      <div class="ministry-title">Children's Ministry</div>
-      <p class="ministry-desc">Raising the next generation in the Word. Dynamic, engaging programs for children from infants through age 12.</p>
-    </div>
-    <div class="ministry-card">
-      <div class="ministry-title">Youth & Young Adults</div>
-      <p class="ministry-desc">A vibrant community for teens and young professionals hungry to encounter God and connect with purpose.</p>
-    </div>
-    <div class="ministry-card">
-      <div class="ministry-title">Praise & Worship</div>
-      <p class="ministry-desc">Our worship team leads the congregation into the presence of God through anointed music and Spirit-filled praise.</p>
-    </div>
-    <div class="ministry-card">
-      <div class="ministry-title">Community Outreach</div>
-      <p class="ministry-desc">We are the hands and feet of Jesus — feeding the hungry, clothing the needy, and serving our city.</p>
-    </div>
-    <div class="ministry-card">
-      <div class="ministry-title">Bible Study</div>
-      <p class="ministry-desc">Deep, transformative study of God's Word in small groups designed to ground believers in Scripture and doctrine.</p>
-    </div>
-  </div>
-</section>
-
-<!-- SCRIPTURE BANNER -->
 <div class="scripture-banner">
   <p class="scripture-text">"I can do all things through Christ who strengthens me."</p>
   <p class="scripture-ref">Philippians 4:13</p>
 </div>
 
-<!-- EVENTS -->
-<section class="events" id="events">
-  <span class="section-label" style="color:var(--gold)">What's Coming Up</span>
-  <h2 class="section-title">Upcoming Events</h2>
-  <div class="gold-divider">
-    <svg viewBox="0 0 20 20"><path d="M10 2L10 18M2 10L18 10" stroke="#C9A84C" stroke-width="1.5" fill="none"/></svg>
-  </div>
-  <div class="events-list">
-    <div class="event-item">
-      <div class="event-date-box">
-        <div class="event-day">18</div>
-        <div class="event-month">May</div>
-      </div>
-      <div>
-        <div class="event-title">Night of Miracles — May Edition</div>
-        <div class="event-meta">Friday · 7:00 PM · Main Sanctuary</div>
-      </div>
-      <div class="event-tag">Monthly</div>
-    </div>
-    <div class="event-item">
-      <div class="event-date-box">
-        <div class="event-day">25</div>
-        <div class="event-month">May</div>
-      </div>
-      <div>
-        <div class="event-title">Youth Empowerment Summit</div>
-        <div class="event-meta">Saturday · 10:00 AM · Fellowship Hall</div>
-      </div>
-      <div class="event-tag">Youth</div>
-    </div>
-    <div class="event-item">
-      <div class="event-date-box">
-        <div class="event-day">01</div>
-        <div class="event-month">Jun</div>
-      </div>
-      <div>
-        <div class="event-title">Community Outreach Day</div>
-        <div class="event-meta">Sunday · After 2nd Service · City Park</div>
-      </div>
-      <div class="event-tag">Outreach</div>
-    </div>
-    <div class="event-item">
-      <div class="event-date-box">
-        <div class="event-day">14</div>
-        <div class="event-month">Jun</div>
-      </div>
-      <div>
-        <div class="event-title">21 Days of Prayer & Fasting</div>
-        <div class="event-meta">Begins Friday · All Services</div>
-      </div>
-      <div class="event-tag">Corporate</div>
-    </div>
-  </div>
-  <a href="#" class="btn-outline" style="margin-top: 2.5rem; display: inline-block;">View All Events</a>
-</section>
-
-<!-- GIVE & CONNECT -->
 <section class="give-connect" id="give">
   <div class="give-box">
     <span class="section-label">Support the Vision</span>
     <h2 class="section-title">Give Online</h2>
-    <p class="section-body">Your generosity fuels Kingdom work — from missions and outreach to the lives changed right here in our city.</p>
-    <a href="#" class="btn-dark">Give Now</a>
+    <p class="section-body">Your generosity fuels Kingdom work &mdash; from missions and outreach to the lives changed right here in our city.</p>
+    <a href="give.html" class="btn-dark">Give Now</a>
   </div>
   <div class="connect-box" id="connect">
     <span class="section-label" style="color:var(--gold-dark)">First Time Here?</span>
     <h2 class="section-title">Plan Your Visit</h2>
     <p class="section-body">We'd love to welcome you. Let us know you're coming and we'll make sure your first Sunday is unforgettable.</p>
-    <a href="#" class="btn-light">I'm New Here</a>
+    <a href="give.html" class="btn-light">I'm New Here</a>
   </div>
 </section>
-
-<!-- FOOTER -->
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <span class="nav-logo">✦ Miracle Temple</span>
+      <span class="nav-logo">&#10022; Miracle Temple</span>
       <p class="footer-tagline">A place where faith comes alive, miracles happen, and community is built on the love of Christ.</p>
     </div>
     <div>
       <div class="footer-heading">Quick Links</div>
       <ul class="footer-links">
-        <li><a href="#welcome">About Us</a></li>
-        <li><a href="#services">Service Times</a></li>
-        <li><a href="#ministries">Ministries</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#give">Online Giving</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Service Times</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="give.html">Online Giving</a></li>
         <li><a href="#">Sermons</a></li>
       </ul>
     </div>
@@ -680,18 +528,17 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p class="footer-copy">© 2026 Miracle Temple. All rights reserved.</p>
+    <p class="footer-copy">&copy; 2026 Miracle Temple. All rights reserved.</p>
     <div class="footer-socials">
       <a href="#" title="Facebook">f</a>
       <a href="#" title="Instagram">in</a>
       <a href="#" title="YouTube">yt</a>
-      <a href="#" title="X/Twitter">𝕏</a>
+      <a href="#" title="X/Twitter">&#120143;</a>
     </div>
   </div>
 </footer>
 
 <script>
-  // Smooth reveal on scroll
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -708,6 +555,5 @@
     observer.observe(el);
   });
 </script>
-
 </body>
 </html>
