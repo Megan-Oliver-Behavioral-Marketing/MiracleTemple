@@ -120,9 +120,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .footer-socials a:hover { background: var(--gold); color: var(--deep); }
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-    }
+      ..nav-toggle { display: flex; }
+.nav-links {
+  display: none;
+  position: fixed;
+  top: 60px; left: 0; right: 0;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(10, 8, 6, 0.98);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  padding: 0.5rem 0 1rem;
+}
+.nav-links.open { display: flex; }
+.nav-links li { width: 100%; text-align: center; }
+.nav-links a { display: block; padding: 1rem 1.5rem; }
+.nav-cta { display: none; }
   </style>
   .nav-toggle {
   display: none;
