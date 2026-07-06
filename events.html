@@ -13,6 +13,120 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <title>Events | Miracle Temple</title>
   <meta name="description" content="Explore upcoming events at Miracle Temple in Byhalia, MS, including youth events, family gatherings, special services, and church celebrations." />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+
+  <!--
+    JSON-LD Event schema for all events on this page.
+    NOTE: I assumed year 2026 for all dates and estimated a few times that
+    weren't specified on the page (marked below). Update as needed:
+    - Youth Day: "after 2nd Service" assumed to start 12:00 PM (2nd service ends ~12:00 PM)
+    - Men's & Women's Day: no specific time given, defaulted to 7:00 PM start
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Event",
+        "name": "Youth Extravaganza: Breakout Sessions",
+        "startDate": "2026-07-17T19:00:00-05:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Miracle Temple",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "742 French Road",
+            "addressLocality": "Byhalia",
+            "addressRegion": "MS",
+            "postalCode": "38611",
+            "addressCountry": "US"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Miracle Temple",
+          "url": "https://www.miracletemplebyhalia.com"
+        },
+        "description": "Breakout sessions for youth as part of Miracle Temple's Youth Extravaganza weekend."
+      },
+      {
+        "@type": "Event",
+        "name": "Youth Extravaganza: Cookout",
+        "startDate": "2026-07-18T12:00:00-05:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Miracle Temple",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "742 French Road",
+            "addressLocality": "Byhalia",
+            "addressRegion": "MS",
+            "postalCode": "38611",
+            "addressCountry": "US"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Miracle Temple",
+          "url": "https://www.miracletemplebyhalia.com"
+        },
+        "description": "A family-friendly cookout as part of Miracle Temple's Youth Extravaganza weekend."
+      },
+      {
+        "@type": "Event",
+        "name": "Youth Day",
+        "startDate": "2026-07-19T12:00:00-05:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "City Park",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Byhalia",
+            "addressRegion": "MS",
+            "addressCountry": "US"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Miracle Temple",
+          "url": "https://www.miracletemplebyhalia.com"
+        },
+        "description": "Youth Day celebration at City Park, held after Miracle Temple's second Sunday service."
+      },
+      {
+        "@type": "Event",
+        "name": "Men's & Women's Day",
+        "startDate": "2026-08-23T19:00:00-05:00",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "location": {
+          "@type": "Place",
+          "name": "Miracle Temple",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "742 French Road",
+            "addressLocality": "Byhalia",
+            "addressRegion": "MS",
+            "postalCode": "38611",
+            "addressCountry": "US"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Miracle Temple",
+          "url": "https://www.miracletemplebyhalia.com"
+        },
+        "description": "A special Men's & Women's Day celebration beginning Friday and continuing through all services at Miracle Temple."
+      }
+    ]
+  }
+  </script>
+
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
