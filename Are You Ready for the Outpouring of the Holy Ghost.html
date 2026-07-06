@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Are You Ready for the Outpouring of the Holy Ghost? | Miracle Temple Blog</title>
+  <meta name="description" content="Pastor Elder Terence Oliver preaches on Acts 2 and the book of Joel, calling believers to repentance and pointing to God's promised outpouring of the Holy Ghost." />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --gold: #9B6FD4; --gold-light: #C9AAEE; --gold-dark: #5E3A8C;
+      --deep: #0A080F; --cream: #F5F3FA; --mid: #14101C;
+      --text: #1E1728; --muted: #6A5A82;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lato', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem; background: rgba(13, 10, 6, 0.92);
+      backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    }
+    .nav-logo { font-family: 'Cinzel', serif; font-size: 1.15rem; letter-spacing: 0.15em; color: var(--gold); text-decoration: none; }
+    .nav-links { display: flex; gap: 2.2rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Lato', sans-serif; font-size: 0.78rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--gold-light); text-decoration: none;
+      transition: color 0.3s; padding-bottom: 4px;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
+    .nav-cta {
+      font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.12em;
+      color: var(--deep); background: var(--gold); padding: 0.55rem 1.4rem;
+      border: none; cursor: pointer; text-decoration: none; transition: background 0.3s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+    .post-hero {
+      background: var(--deep); padding: 10rem 2rem 4rem; text-align: center; position: relative; overflow: hidden;
+    }
+    .post-hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 70%);
+    }
+    .post-eyebrow {
+      font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem; position: relative; z-index: 1;
+    }
+    .post-hero h1 {
+      font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.2rem); color: #fff;
+      max-width: 800px; margin: 0 auto; position: relative; z-index: 1;
+    }
+    .post-hero-meta {
+      font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold-light);
+      margin-top: 1.2rem; font-size: 1.1rem; position: relative; z-index: 1;
+    }
+    article {
+      max-width: 720px; margin: 0 auto; padding: 4.5rem 2rem 6rem;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; line-height: 1.85; color: var(--text);
+    }
+    article h2 {
+      font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--deep);
+      margin: 2.5rem 0 1rem; font-weight: 600;
+    }
+    article p { margin-bottom: 1.3rem; }
+    article .scripture-quote {
+      border-left: 3px solid var(--gold); padding: 0.5rem 0 0.5rem 1.5rem;
+      font-style: italic; color: var(--gold-dark); margin: 2rem 0;
+    }
+    article .takeaways {
+      background: var(--deep); color: #fff; padding: 2.5rem; margin-top: 3rem;
+    }
+    article .takeaways h2 { color: var(--gold); margin-top: 0; }
+    article .takeaways ul { padding-left: 1.3rem; }
+    article .takeaways li { margin-bottom: 0.8rem; font-size: 1.1rem; }
+    .post-cta {
+      text-align: center; padding: 0 2rem 5rem;
+    }
+    .btn-primary {
+      font-family: 'Cinzel', serif; font-size: 0.82rem; letter-spacing: 0.12em;
+      color: var(--deep); background: var(--gold); padding: 1rem 2.5rem;
+      border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.3s;
+    }
+    .btn-primary:hover { background: var(--gold-light); }
+    footer {
+      background: #080604; padding: 4rem 2rem 2rem; border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    .footer-grid {
+      max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem; margin-bottom: 3rem;
+    }
+    .footer-brand .nav-logo { font-size: 1.3rem; display: block; margin-bottom: 1rem; }
+    .footer-tagline { font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+    .footer-heading { font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 1.2rem; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-links a { font-size: 0.85rem; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-address { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
+    .footer-address a { color: var(--gold); text-decoration: none; }
+    .footer-bottom {
+      max-width: 1000px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-socials { display: flex; gap: 1.2rem; }
+    .footer-socials a {
+      width: 34px; height: 34px; border: 1px solid rgba(201,168,76,0.2);
+      display: flex; align-items: center; justify-content: center; color: var(--gold);
+      text-decoration: none; font-size: 0.75rem; transition: all 0.3s;
+    }
+    .footer-socials a:hover { background: var(--gold); color: var(--deep); }
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">&#10022; Miracle Temple</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ministries.html">Ministries</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="give.html">Give</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Plan a Visit</a>
+</nav>
+
+<section class="post-hero">
+  <div class="post-hero-bg"></div>
+  <p class="post-eyebrow">Sermon Reflection</p>
+  <h1>Are You Ready for the Outpouring of the Holy Ghost?</h1>
+  <p class="post-hero-meta">Pastor Elder Terence Oliver &middot; [Insert Date] &middot; Acts 2:14-21, Joel 2</p>
+</section>
+
+<article>
+  <p>This week, Pastor Elder Terence Oliver preached a stirring message from Acts 2 and the book of Joel, calling the church to repentance and pointing forward to God's promise of a fresh outpouring of the Holy Ghost. Drawing on the words of the prophet Joel, Pastor Oliver reminded the congregation that revival always begins the same way: with a heart willing to turn back to God.</p>
+
+  <h2>Why Does the Book of Joel Still Matter Today?</h2>
+  <p>Joel is often called a "minor prophet," but Pastor Oliver was quick to correct that label. "Minor" simply refers to the shorter length of the book compared to prophets like Isaiah &mdash; it does not mean the message carries any less weight. Joel's book is, at its heart, a call for repentance, a call for deliverance, and a promise of the outpouring of the Holy Spirit.</p>
+  <p>Joel didn't single out one group of people. He called the old to repent. He called the young to repent. He called drunkards, farmers, and even priests to turn from their wicked ways. Pastor Oliver brought that same call into today: "I come to you to repent and turn from your wicked ways."</p>
+
+  <h2>What Does True Repentance Require?</h2>
+  <p>Peter picked up this same theme in Acts 3:19, urging the crowd in Jerusalem toward genuine change of heart:</p>
+  <div class="scripture-quote">
+    "Repent ye therefore, and be converted, that your sins may be blotted out, when the times of refreshing shall come from the presence of the Lord." &mdash; Acts 3:19
+  </div>
+  <p>Pastor Oliver was clear that this call to repentance isn't reserved for the congregation alone &mdash; it extends to preachers as well. Referencing 1 Corinthians 9:27, he reminded the church that even those who preach to others must keep watch over their own hearts: "But I keep under my body, and bring it into subjection, lest that by any means, when I have preached to others, I myself should be a castaway."</p>
+
+  <h2>What Does God Promise After Repentance?</h2>
+  <p>The message didn't stop at repentance &mdash; it moved into deliverance and restoration. Pastor Oliver pointed the church to Joel 2:21, declaring over the congregation: "Fear not, O land; be glad and rejoice: for the Lord will do great things."</p>
+  <p>From there, he lifted up Joel's promise of restoration found in Joel 2:25-26 &mdash; that God restores what has been lost, "the years that the locust hath eaten," and that His people "shall never be ashamed." The sermon built toward Joel's climactic promise, echoed again in Acts 2: that God would pour out His Spirit upon all flesh &mdash; sons and daughters prophesying, young men seeing visions, old men dreaming dreams.</p>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Revival begins with repentance &mdash; a genuine turning back to God, regardless of age, background, or role in the church.</li>
+      <li>God's promise of restoration in Joel 2 assures believers that what has been lost can be restored in full.</li>
+      <li>The outpouring of the Holy Ghost, first poured out in Acts 2, remains a promise for believers today: "whosoever shall call on the name of the Lord shall be saved."</li>
+    </ul>
+  </div>
+</article>
+
+<div class="post-cta">
+  <a href="contact.html" class="btn-primary">Plan Your Visit This Sunday</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">&#10022; Miracle Temple</span>
+      <p class="footer-tagline">A place where faith comes alive, miracles happen, and community is built on the love of Christ.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Service Times</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="give.html">Online Giving</a></li>
+        <li><a href="blog.html">Sermon Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Find Us</div>
+      <p class="footer-address">
+        742 French Road <br/>
+        Byhalia, MS 38611<br/><br/>
+        <a href="mailto:miracletemplec@gmail.com">miracletemplec@gmail.com</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Miracle Temple. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="#" title="Facebook">f</a>
+      <a href="#" title="Instagram">in</a>
+      <a href="#" title="YouTube">yt</a>
+      <a href="#" title="X/Twitter">&#120143;</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
