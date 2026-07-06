@@ -8,11 +8,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NW8M6C62');</script>
 <!-- End Google Tag Manager -->
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Miracle Temple</title>
-  <meta name="description" content="Give online to Miracle Temple in Byhalia, MS, support local outreach and Kingdom work, or plan your first visit with the church family." />
+  <meta name="description" content="Contact Miracle Temple to plan your visit, ask a question, or request prayer. We'd love to hear from you." />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -69,6 +68,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       text-decoration: none; transition: background 0.3s;
     }
     .nav-cta:hover { background: var(--gold-light); }
+
+    /* Mobile hamburger toggle button */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px; height: 18px;
+      background: none; border: none; cursor: pointer; padding: 0;
+      z-index: 200;
+    }
+    .nav-toggle span {
+      display: block; height: 2px; width: 100%;
+      background: var(--gold);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
     .page-hero {
       min-height: 50vh;
@@ -240,36 +257,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
       .nav-toggle { display: flex; }
-.nav-links {
-  display: none;
-  position: fixed;
-  top: 60px; left: 0; right: 0;
-  flex-direction: column;
-  gap: 0;
-  background: rgba(10, 8, 6, 0.98);
-  border-bottom: 1px solid rgba(201,168,76,0.2);
-  padding: 0.5rem 0 1rem;
-}
-.nav-links.open { display: flex; }
-.nav-links li { width: 100%; text-align: center; }
-.nav-links a { display: block; padding: 1rem 1.5rem; }
-.nav-cta { display: none; }
-  .nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px; height: 18px;
-  background: none; border: none; cursor: pointer; padding: 0;
-  z-index: 200;
-}
-.nav-toggle span {
-  display: block; height: 2px; width: 100%;
-  background: var(--gold);
-  transition: transform 0.3s, opacity 0.3s;
-}
-.nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.nav-toggle.active span:nth-child(2) { opacity: 0; }
-.nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px; left: 0; right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(10, 8, 6, 0.98);
+        border-bottom: 1px solid rgba(201,168,76,0.2);
+        padding: 0.5rem 0 1rem;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; text-align: center; }
+      .nav-links a { display: block; padding: 1rem 1.5rem; }
+      .nav-cta { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -278,6 +283,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <nav>
   <a href="index.html" class="nav-logo">&#10022; Miracle Temple</a>
+  <button class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
@@ -302,10 +310,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2 class="section-title">Send Us a Message</h2>
   <p class="section-body">Fill out the form below and our team will follow up with you personally.</p>
 
-  <!-- 
-    IMPORTANT: Replace YOUR_FORM_ID below with the endpoint Formspree gives you,
-    e.g. https://formspree.io/f/xyzabcde
-  -->
   <form class="contact-form" action="https://formspree.io/f/xkolyywb" method="POST">
     <div class="form-row">
       <div class="form-group">
@@ -385,5 +389,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+</script>
 </body>
 </html>
