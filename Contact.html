@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Miracle Temple</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #9B6FD4;
+      --gold-light: #C9AAEE;
+      --gold-dark: #5E3A8C;
+      --deep: #0A080F;
+      --cream: #F5F3FA;
+      --mid: #14101C;
+      --text: #1E1728;
+      --muted: #6A5A82;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: rgba(13, 10, 6, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem; letter-spacing: 0.15em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold-light); text-decoration: none;
+      transition: color 0.3s;
+      padding-bottom: 4px;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
+    .nav-cta {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem; letter-spacing: 0.12em;
+      color: var(--deep); background: var(--gold);
+      padding: 0.55rem 1.4rem; border: none; cursor: pointer;
+      text-decoration: none; transition: background 0.3s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    .page-hero {
+      min-height: 50vh;
+      background: var(--deep);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; text-align: center;
+      padding: 10rem 2rem 4rem;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.06) 0%, transparent 60%);
+    }
+    .hero-eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+      position: relative; z-index: 1;
+    }
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 700; line-height: 1.1;
+      color: #fff; letter-spacing: 0.03em;
+      position: relative; z-index: 1;
+    }
+    .hero-title span { color: var(--gold); }
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      font-style: italic; color: var(--gold-light);
+      margin-top: 1rem; max-width: 560px;
+      position: relative; z-index: 1;
+    }
+
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem; display: block;
+    }
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 600; line-height: 1.2;
+      color: var(--deep); margin-bottom: 1.5rem;
+    }
+    .section-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; line-height: 1.8;
+      color: var(--muted); margin-bottom: 1.2rem;
+    }
+
+    .contact-wrap {
+      max-width: 700px; margin: 0 auto;
+      padding: 5rem 2rem 7rem;
+      text-align: center;
+    }
+
+    .contact-form {
+      margin-top: 3rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-group.full { grid-column: 1 / -1; }
+    label {
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+    }
+    input, select, textarea {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: #fff;
+      border: 1px solid rgba(94, 58, 140, 0.25);
+      padding: 0.85rem 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--gold);
+    }
+    textarea { resize: vertical; min-height: 120px; font-family: 'Lato', sans-serif; }
+
+    .submit-btn {
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem; letter-spacing: 0.12em;
+      color: #fff; background: var(--deep);
+      padding: 1rem 2.5rem; border: none; cursor: pointer;
+      transition: all 0.3s;
+      align-self: flex-start;
+      margin-top: 0.5rem;
+    }
+    .submit-btn:hover { background: var(--gold-dark); }
+
+    .form-note {
+      font-size: 0.8rem; color: var(--muted);
+      margin-top: 1rem;
+    }
+
+    .contact-info {
+      background: var(--deep);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .contact-info .section-title { color: #fff; }
+    .contact-info .section-body { color: var(--gold-light); }
+    .contact-info a { color: var(--gold); text-decoration: none; }
+
+    footer {
+      background: #080604;
+      padding: 4rem 2rem 2rem;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    .footer-grid {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem; margin-bottom: 3rem;
+    }
+    .footer-brand .nav-logo { font-size: 1.3rem; display: block; margin-bottom: 1rem; }
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; color: var(--muted); font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .footer-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem; letter-spacing: 0.2em;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-links a {
+      font-size: 0.85rem; color: var(--muted);
+      text-decoration: none; transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-address { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
+    .footer-address a { color: var(--gold); text-decoration: none; }
+    .footer-bottom {
+      max-width: 1000px; margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-socials { display: flex; gap: 1.2rem; }
+    .footer-socials a {
+      width: 34px; height: 34px; border: 1px solid rgba(201,168,76,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); text-decoration: none; font-size: 0.75rem;
+      transition: all 0.3s;
+    }
+    .footer-socials a:hover { background: var(--gold); color: var(--deep); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">&#10022; Miracle Temple</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="ministries.html">Ministries</a></li>
+    <li><a href="events.html">Events</a></li>
+    <li><a href="give.html">Give</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Plan a Visit</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <p class="hero-eyebrow">First Time Here?</p>
+  <h1 class="hero-title">Plan Your <span>Visit</span></h1>
+  <p class="hero-sub">We'd love to welcome you. Send us a message and let's connect.</p>
+</section>
+
+<section class="contact-wrap">
+  <span class="section-label">Get In Touch</span>
+  <h2 class="section-title">Send Us a Message</h2>
+  <p class="section-body">Fill out the form below and our team will follow up with you personally.</p>
+
+  <!-- 
+    IMPORTANT: Replace YOUR_FORM_ID below with the endpoint Formspree gives you,
+    e.g. https://formspree.io/f/xyzabcde
+  -->
+  <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+      <div class="form-group">
+        <label for="visit">I'm Interested In</label>
+        <select id="visit" name="interest">
+          <option>Planning My First Visit</option>
+          <option>Prayer Request</option>
+          <option>Membership Info</option>
+          <option>General Question</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group full">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Tell us a little about yourself, or ask us anything..."></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Send Message</button>
+    <p class="form-note">We typically respond within 1-2 business days.</p>
+  </form>
+</section>
+
+<div class="contact-info">
+  <span class="section-label" style="color:var(--gold)">Or Reach Us Directly</span>
+  <h2 class="section-title">Find Us</h2>
+  <p class="section-body">742 French Road, Byhalia, MS 38611</p>
+  <p class="section-body"><a href="mailto:miracletemplec@gmail.com">miracletemplec@gmail.com</a></p>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">&#10022; Miracle Temple</span>
+      <p class="footer-tagline">A place where faith comes alive, miracles happen, and community is built on the love of Christ.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Service Times</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="give.html">Online Giving</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Find Us</div>
+      <p class="footer-address">
+        742 French Road <br/>
+        Byhalia, MS 38611<br/><br/>
+        <a href="mailto:miracletemplec@gmail.com">miracletemplec@gmail.com</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Miracle Temple. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="#" title="Facebook">f</a>
+      <a href="#" title="Instagram">in</a>
+      <a href="#" title="YouTube">yt</a>
+      <a href="#" title="X/Twitter">&#120143;</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
