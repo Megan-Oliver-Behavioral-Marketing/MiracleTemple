@@ -429,15 +429,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-      .welcome { grid-template-columns: 1fr; gap: 3rem; }
-      .welcome-img { order: -1; }
-      .welcome-img-accent { display: none; }
-      .give-connect { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .event-item { grid-template-columns: 70px 1fr; }
-      .event-tag { display: none; }
-    }
+      .nav-toggle { display: flex; }
+.nav-links {
+  display: none;
+  position: fixed;
+  top: 60px; left: 0; right: 0;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(10, 8, 6, 0.98);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  padding: 0.5rem 0 1rem;
+}
+.nav-links.open { display: flex; }
+.nav-links li { width: 100%; text-align: center; }
+.nav-links a { display: block; padding: 1rem 1.5rem; }
+.nav-cta { display: none; }
   </style>
   .nav-toggle {
   display: none;
