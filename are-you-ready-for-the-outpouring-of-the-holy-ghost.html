@@ -83,7 +83,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       margin-top: 1.2rem; font-size: 1.1rem; position: relative; z-index: 1;
     }
     article {
-      max-width: 720px; margin: 0 auto; padding: 4.5rem 2rem 6rem;
+      max-width: 720px; margin: 0 auto; padding: 4.5rem 2rem 4rem;
       font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; line-height: 1.85; color: var(--text);
     }
     article h2 {
@@ -101,15 +101,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     article .takeaways h2 { color: var(--gold); margin-top: 0; }
     article .takeaways ul { padding-left: 1.3rem; }
     article .takeaways li { margin-bottom: 0.8rem; font-size: 1.1rem; }
-    .post-cta {
-      text-align: center; padding: 0 2rem 5rem;
+
+    /* Stay Connected CTA */
+    .stay-connected {
+      max-width: 720px; margin: 0 auto; padding: 0 2rem 6rem;
     }
-    .btn-primary {
-      font-family: 'Cinzel', serif; font-size: 0.82rem; letter-spacing: 0.12em;
-      color: var(--deep); background: var(--gold); padding: 1rem 2.5rem;
-      border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.3s;
+    .stay-connected-box {
+      background: var(--deep);
+      padding: 3rem 2.5rem;
+      text-align: center;
     }
-    .btn-primary:hover { background: var(--gold-light); }
+    .stay-connected-eyebrow {
+      font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.25em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem;
+    }
+    .stay-connected-title {
+      font-family: 'Cinzel', serif; font-size: 1.6rem; color: #fff; margin-bottom: 0.8rem;
+    }
+    .stay-connected-body {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--gold-light);
+      max-width: 480px; margin: 0 auto 1.8rem;
+    }
+    .signup-form {
+      display: flex; gap: 0.8rem; max-width: 440px; margin: 0 auto;
+      flex-wrap: wrap; justify-content: center;
+    }
+    .signup-form input[type="email"] {
+      flex: 1; min-width: 220px;
+      font-family: 'Lato', sans-serif; font-size: 0.95rem;
+      padding: 0.85rem 1rem; border: 1px solid rgba(201,168,76,0.3);
+      background: rgba(255,255,255,0.05); color: #fff; outline: none;
+    }
+    .signup-form input[type="email"]::placeholder { color: var(--gold-light); opacity: 0.6; }
+    .signup-form input[type="email"]:focus { border-color: var(--gold); }
+    .signup-btn {
+      font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.1em;
+      color: var(--deep); background: var(--gold);
+      padding: 0.85rem 1.6rem; border: none; cursor: pointer;
+      text-transform: uppercase; transition: background 0.3s; white-space: nowrap;
+    }
+    .signup-btn:hover { background: var(--gold-light); }
+    .signup-note {
+      font-size: 0.75rem; color: var(--muted); margin-top: 1rem;
+    }
+
     footer {
       background: #080604; padding: 4rem 2rem 2rem; border-top: 1px solid rgba(201,168,76,0.15);
     }
@@ -154,6 +189,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       .nav-links li { width: 100%; text-align: center; }
       .nav-links a { display: block; padding: 1rem 1.5rem; }
       .nav-cta { display: none; }
+      .signup-form { flex-direction: column; }
     }
   </style>
 </head>
@@ -214,9 +250,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </article>
 
-<div class="post-cta">
-  <a href="contact.html" class="btn-primary">Plan Your Visit This Sunday</a>
-</div>
+<section class="stay-connected">
+  <div class="stay-connected-box">
+    <div class="stay-connected-eyebrow">Stay Connected</div>
+    <h2 class="stay-connected-title">Never Miss a Message</h2>
+    <p class="stay-connected-body">Get new sermon reflections and teachings from Pastor Elder Terence Oliver delivered straight to your inbox each week.</p>
+    <form class="signup-form" action="https://formspree.io/f/YOUR_NEWSLETTER_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit" class="signup-btn">Keep Me Posted</button>
+    </form>
+    <p class="signup-note">No spam, just weekly encouragement. Unsubscribe anytime.</p>
+  </div>
+</section>
 
 <footer>
   <div class="footer-grid">
