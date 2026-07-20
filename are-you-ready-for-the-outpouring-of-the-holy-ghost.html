@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
+  <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -10,8 +10,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | Miracle Temple</title>
-  <meta name="description" content="Read weekly sermon reflections from Miracle Temple in Byhalia, MS, featuring teachings from Pastor Elder Terence Oliver on faith, purpose, and community." />
+
+  <title>Are You Ready for the Outpouring of the Holy Ghost? | Miracle Temple Blog</title>
+  <meta name="description" content="Pastor Elder Terence Oliver preaches on Acts 2 and the book of Joel, calling believers to repentance and pointing to God's promised outpouring of the Holy Ghost." />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -62,77 +63,74 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
     .nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-    .page-hero {
-      min-height: 45vh; background: var(--deep);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      position: relative; overflow: hidden; text-align: center; padding: 10rem 2rem 4rem;
+    .post-hero {
+      background: var(--deep); padding: 10rem 2rem 4rem; text-align: center; position: relative; overflow: hidden;
     }
-    .page-hero-bg {
+    .post-hero-bg {
       position: absolute; inset: 0;
-      background: radial-gradient(ellipse 60% 60% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.06) 0%, transparent 60%);
+      background: radial-gradient(ellipse 60% 60% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 70%);
     }
-    .hero-eyebrow {
-      font-family: 'Lato', sans-serif; font-size: 0.72rem; letter-spacing: 0.35em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; position: relative; z-index: 1;
+    .post-eyebrow {
+      font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem; position: relative; z-index: 1;
     }
-    .hero-title {
-      font-family: 'Cinzel', serif; font-size: clamp(2.4rem, 6vw, 4.5rem);
-      font-weight: 700; line-height: 1.1; color: #fff; letter-spacing: 0.03em; position: relative; z-index: 1;
+    .post-hero h1 {
+      font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.2rem); color: #fff;
+      max-width: 800px; margin: 0 auto; position: relative; z-index: 1;
     }
-    .hero-title span { color: var(--gold); }
-    .hero-sub {
-      font-family: 'Cormorant Garamond', serif; font-size: clamp(1.05rem, 2.2vw, 1.3rem);
-      font-style: italic; color: var(--gold-light); margin-top: 1rem; max-width: 560px; position: relative; z-index: 1;
+    .post-hero-meta {
+      font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--gold-light);
+      margin-top: 1.2rem; font-size: 1.1rem; position: relative; z-index: 1;
     }
-    .blog-list {
-      max-width: 850px; margin: 0 auto; padding: 5rem 2rem 3rem;
-      display: flex; flex-direction: column; gap: 2rem;
+    article {
+      max-width: 720px; margin: 0 auto; padding: 4.5rem 2rem 4rem;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; line-height: 1.85; color: var(--text);
     }
-    .post-card {
-      border: 1px solid rgba(94,58,140,0.18); padding: 2.2rem 2.2rem;
-      transition: all 0.3s; display: block; text-decoration: none; color: inherit; position: relative; overflow: hidden;
+    article h2 {
+      font-family: 'Cinzel', serif; font-size: 1.5rem; color: var(--deep);
+      margin: 2.5rem 0 1rem; font-weight: 600;
     }
-    .post-card::before {
-      content: ''; position: absolute; bottom: 0; left: 0; width: 3px; height: 0;
-      background: var(--gold); transition: height 0.4s;
+    article p { margin-bottom: 1.3rem; }
+    article .scripture-quote {
+      border-left: 3px solid var(--gold); padding: 0.5rem 0 0.5rem 1.5rem;
+      font-style: italic; color: var(--gold-dark); margin: 2rem 0;
     }
-    .post-card:hover::before { height: 100%; }
-    .post-card:hover { border-color: rgba(155,111,212,0.5); }
-    .post-date {
-      font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--gold-dark); margin-bottom: 0.7rem;
+    article .takeaways {
+      background: var(--deep); color: #fff; padding: 2.5rem; margin-top: 3rem;
     }
-    .post-title {
-      font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--deep); margin-bottom: 0.8rem;
+    article .takeaways h2 { color: var(--gold); margin-top: 0; }
+    article .takeaways ul { padding-left: 1.3rem; }
+    article .takeaways li { margin-bottom: 0.8rem; font-size: 1.1rem; }
+
+    .post-cta {
+      text-align: center; padding: 3rem 2rem;
     }
-    .post-excerpt {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; line-height: 1.7; color: var(--muted);
+    .btn-primary {
+      font-family: 'Cinzel', serif; font-size: 0.82rem; letter-spacing: 0.12em;
+      color: var(--deep); background: var(--gold); padding: 1rem 2.5rem;
+      border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.3s;
     }
-    .post-scripture {
-      font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--gold-dark); margin-top: 1rem; display: inline-block;
-    }
+    .btn-primary:hover { background: var(--gold-light); }
 
     /* Stay Connected CTA */
     .stay-connected {
-      max-width: 850px; margin: 1rem auto 6rem; padding: 0 2rem;
+      max-width: 620px; margin: 0 auto; padding: 0 2rem;
     }
     .stay-connected-box {
       background: var(--deep);
-      padding: 3rem 2.5rem;
+      padding: 1.5rem 2rem;
       text-align: center;
     }
     .stay-connected-eyebrow {
-      font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.25em;
-      text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem;
+      font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem;
     }
     .stay-connected-title {
-      font-family: 'Cinzel', serif; font-size: 1.6rem; color: #fff; margin-bottom: 0.8rem;
+      font-family: 'Cinzel', serif; font-size: 1.15rem; color: #fff; margin-bottom: 0.5rem;
     }
     .stay-connected-body {
-      font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--gold-light);
-      max-width: 480px; margin: 0 auto 1.8rem;
+      font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; color: var(--gold-light);
+      max-width: 480px; margin: 0 auto 1rem;
     }
     .signup-form {
       display: flex; gap: 0.8rem; max-width: 440px; margin: 0 auto;
@@ -154,7 +152,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
     .signup-btn:hover { background: var(--gold-light); }
     .signup-note {
-      font-size: 0.75rem; color: var(--muted); margin-top: 1rem;
+      font-size: 0.7rem; color: var(--muted); margin-top: 0.7rem;
     }
 
     footer {
@@ -206,7 +204,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW8M6C62"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -227,33 +225,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="contact.html" class="nav-cta">Plan a Visit</a>
 </nav>
 
-<section class="page-hero">
-  <div class="page-hero-bg"></div>
-  <p class="hero-eyebrow">Weekly Reflections</p>
-  <h1 class="hero-title">Sermon <span>Blog</span></h1>
-  <p class="hero-sub">Teachings and takeaways from Pastor Elder Terence Oliver, straight from the pulpit to you</p>
+<section class="post-hero">
+  <div class="post-hero-bg"></div>
+  <p class="post-eyebrow">Sermon Reflection</p>
+  <h1>Are You Ready for the Outpouring of the Holy Ghost?</h1>
+  <p class="post-hero-meta">Pastor Elder Terence Oliver &middot; [Insert Date] &middot; Acts 2:14-21, Joel 2</p>
 </section>
 
-<section class="blog-list">
+<article>
+  <p>This week, Pastor Elder Terence Oliver preached a stirring message from Acts 2 and the book of Joel, calling the church to repentance and pointing forward to God's promise of a fresh outpouring of the Holy Ghost. Drawing on the words of the prophet Joel, Pastor Oliver reminded the congregation that revival always begins the same way: with a heart willing to turn back to God.</p>
 
-  <!--
-    HOW TO ADD A NEW POST EACH WEEK:
-    1. Copy blog-post-template.html, rename it (e.g. blog-faith-that-moves-mountains.html)
-    2. Fill in the content following the template's structure
-    3. Copy one of the <a class="post-card"> blocks below, paste it at the TOP of this list
-       (so newest posts show first), and update the title/date/excerpt/link
-  -->
+  <h2>Why Does the Book of Joel Still Matter Today?</h2>
+  <p>Joel is often called a "minor prophet," but Pastor Oliver was quick to correct that label. "Minor" simply refers to the shorter length of the book compared to prophets like Isaiah &mdash; it does not mean the message carries any less weight. Joel's book is, at its heart, a call for repentance, a call for deliverance, and a promise of the outpouring of the Holy Spirit.</p>
+  <p>Joel didn't single out one group of people. He called the old to repent. He called the young to repent. He called drunkards, farmers, and even priests to turn from their wicked ways. Pastor Oliver brought that same call into today: "I come to you to repent and turn from your wicked ways."</p>
 
-  <a href="are-you-ready-for-the-outpouring-of-the-holy-ghost.html" class="post-card">
-    <div class="post-date">[Insert Date]</div>
-    <div class="post-title">Are You Ready for the Outpouring of the Holy Ghost?</div>
-    <p class="post-excerpt">Pastor Elder Terence Oliver calls the church to repentance from the book of Joel, pointing toward God's promised outpouring of the Holy Ghost and restoration for His people.</p>
-    <span class="post-scripture">Scripture: Acts 2:14-21, Joel 2</span>
-  </a>
+  <h2>What Does True Repentance Require?</h2>
+  <p>Peter picked up this same theme in Acts 3:19, urging the crowd in Jerusalem toward genuine change of heart:</p>
+  <div class="scripture-quote">
+    "Repent ye therefore, and be converted, that your sins may be blotted out, when the times of refreshing shall come from the presence of the Lord." &mdash; Acts 3:19
+  </div>
+  <p>Pastor Oliver was clear that this call to repentance isn't reserved for the congregation alone &mdash; it extends to preachers as well. Referencing 1 Corinthians 9:27, he reminded the church that even those who preach to others must keep watch over their own hearts: "But I keep under my body, and bring it into subjection, lest that by any means, when I have preached to others, I myself should be a castaway."</p>
+</article>
 
-</section>
-
-<section class="stay-connected">
+<section class="stay-connected" style="margin: 3rem auto;">
   <div class="stay-connected-box">
     <div class="stay-connected-eyebrow">Stay Connected</div>
     <h2 class="stay-connected-title">Never Miss a Message</h2>
@@ -265,6 +259,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="signup-note">No spam, just weekly encouragement. Unsubscribe anytime.</p>
   </div>
 </section>
+
+<article style="padding-top: 0;">
+  <h2>What Does God Promise After Repentance?</h2>
+  <p>The message didn't stop at repentance &mdash; it moved into deliverance and restoration. Pastor Oliver pointed the church to Joel 2:21, declaring over the congregation: "Fear not, O land; be glad and rejoice: for the Lord will do great things."</p>
+  <p>From there, he lifted up Joel's promise of restoration found in Joel 2:25-26 &mdash; that God restores what has been lost, "the years that the locust hath eaten," and that His people "shall never be ashamed." The sermon built toward Joel's climactic promise, echoed again in Acts 2: that God would pour out His Spirit upon all flesh &mdash; sons and daughters prophesying, young men seeing visions, old men dreaming dreams.</p>
+
+  <div class="takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+      <li>Revival begins with repentance &mdash; a genuine turning back to God, regardless of age, background, or role in the church.</li>
+      <li>God's promise of restoration in Joel 2 assures believers that what has been lost can be restored in full.</li>
+      <li>The outpouring of the Holy Ghost, first poured out in Acts 2, remains a promise for believers today: "whosoever shall call on the name of the Lord shall be saved."</li>
+    </ul>
+  </div>
+</article>
+
+<div class="post-cta">
+  <a href="contact.html" class="btn-primary">Plan Your Visit This Sunday</a>
+</div>
 
 <footer>
   <div class="footer-grid">
