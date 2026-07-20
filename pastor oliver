@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NW8M6C62');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastor Elder Terence Oliver | Miracle Temple</title>
+  <meta name="description" content="Meet Pastor Elder Terence Oliver of Miracle Temple in Byhalia, MS &mdash; his call to ministry, his family, and his heart for the church." />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #9B6FD4;
+      --gold-light: #C9AAEE;
+      --gold-dark: #5E3A8C;
+      --deep: #0A080F;
+      --cream: #F5F3FA;
+      --mid: #14101C;
+      --text: #1E1728;
+      --muted: #6A5A82;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: rgba(13, 10, 6, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem; letter-spacing: 0.15em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold-light); text-decoration: none;
+      transition: color 0.3s;
+      padding-bottom: 4px;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
+    .nav-cta {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem; letter-spacing: 0.12em;
+      color: var(--deep); background: var(--gold);
+      padding: 0.55rem 1.4rem; border: none; cursor: pointer;
+      text-decoration: none; transition: background 0.3s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* Mobile hamburger toggle button */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px; height: 18px;
+      background: none; border: none; cursor: pointer; padding: 0;
+      z-index: 200;
+    }
+    .nav-toggle span {
+      display: block; height: 2px; width: 100%;
+      background: var(--gold);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .page-hero {
+      min-height: 45vh;
+      background: var(--deep);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; text-align: center;
+      padding: 10rem 2rem 4rem;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.06) 0%, transparent 60%);
+    }
+    .hero-eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+      position: relative; z-index: 1;
+    }
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 700; line-height: 1.1;
+      color: #fff; letter-spacing: 0.03em;
+      position: relative; z-index: 1;
+    }
+    .hero-title span { color: var(--gold); }
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      font-style: italic; color: var(--gold-light);
+      margin-top: 1rem; max-width: 560px;
+      position: relative; z-index: 1;
+    }
+
+    .bio-wrap {
+      max-width: 1100px; margin: 0 auto;
+      padding: 6rem 2rem;
+      display: grid; grid-template-columns: 340px 1fr; gap: 5rem;
+      align-items: start;
+    }
+    .bio-photo-box {
+      width: 100%; aspect-ratio: 4/5;
+      background: linear-gradient(135deg, #1C1610 0%, #2C2010 100%);
+      position: relative; overflow: hidden;
+    }
+    .bio-photo-box::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A84C' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .bio-photo-inner {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-align: center; gap: 1rem;
+    }
+    .bio-photo-initials {
+      font-family: 'Cinzel', serif; font-size: 3.5rem; color: var(--gold);
+      opacity: 0.5; letter-spacing: 0.1em;
+    }
+    .bio-photo-note {
+      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--muted); opacity: 0.8;
+    }
+    .bio-titles {
+      margin-top: 1.5rem; text-align: center;
+    }
+    .bio-name {
+      font-family: 'Cinzel', serif; font-size: 1.15rem; color: var(--deep); margin-bottom: 0.3rem;
+    }
+    .bio-role {
+      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-dark);
+    }
+
+    .bio-content h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--deep); margin-bottom: 1.2rem; font-weight: 600;
+    }
+    .bio-content .section-label {
+      font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem; display: block;
+    }
+    .bio-section {
+      margin-bottom: 2.8rem;
+    }
+    .bio-section h3 {
+      font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--gold-dark);
+      margin-bottom: 0.8rem; letter-spacing: 0.02em;
+    }
+    .bio-section p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; line-height: 1.85;
+      color: var(--muted); margin-bottom: 1rem;
+    }
+    .bio-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 1.3rem; color: var(--gold-dark);
+      border-left: 3px solid var(--gold); padding-left: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .scripture-banner {
+      background: var(--gold);
+      padding: 5rem 2rem; text-align: center;
+    }
+    .scripture-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 4vw, 2.8rem);
+      font-style: italic; font-weight: 300;
+      color: var(--deep); line-height: 1.4;
+      max-width: 800px; margin: 0 auto 1rem;
+    }
+    .scripture-ref {
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem; letter-spacing: 0.2em;
+      color: var(--gold-dark);
+    }
+
+    .bio-cta {
+      text-align: center; padding: 5rem 2rem;
+    }
+    .btn-primary {
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem; letter-spacing: 0.12em;
+      color: var(--deep); background: var(--gold);
+      padding: 1rem 2.5rem; border: none; cursor: pointer;
+      text-decoration: none; transition: all 0.3s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    footer {
+      background: #080604;
+      padding: 4rem 2rem 2rem;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    .footer-grid {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem; margin-bottom: 3rem;
+    }
+    .footer-brand .nav-logo { font-size: 1.3rem; display: block; margin-bottom: 1rem; }
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; color: var(--muted); font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .footer-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem; letter-spacing: 0.2em;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-links a {
+      font-size: 0.85rem; color: var(--muted);
+      text-decoration: none; transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-address { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
+    .footer-address a { color: var(--gold); text-decoration: none; }
+    .footer-bottom {
+      max-width: 1000px; margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-socials { display: flex; gap: 1.2rem; }
+    .footer-socials a {
+      width: 34px; height: 34px; border: 1px solid rgba(201,168,76,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); text-decoration: none; font-size: 0.75rem;
+      transition: all 0.3s;
+    }
+    .footer-socials a:hover { background: var(--gold); color: var(--deep); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px; left: 0; right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(10, 8, 6, 0.98);
+        border-bottom: 1px solid rgba(201,168,76,0.2);
+        padding: 0.5rem 0 1rem;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; text-align: center; }
+      .nav-links a { display: block; padding: 1rem 1.5rem; }
+      .nav-cta { display: none; }
+      .bio-wrap { grid-template-columns: 1fr; gap: 3rem; }
+      .bio-photo-box { max-width: 280px; margin: 0 auto; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW8M6C62"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav>
+  <a href="index.html" class="nav-logo">&#10022; Miracle Temple</a>
+  <button class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="ministries.html">Ministries</a></li><li><a href="events.html">Events</a></li><li><a href="give.html">Give</a></li><li><a href="blog.html">Blog</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Plan a Visit</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <p class="hero-eyebrow">Meet Our Pastor</p>
+  <h1 class="hero-title">Pastor Elder <span>Terence Oliver</span></h1>
+  <p class="hero-sub">Called to serve, faithful in the small things, and devoted to Miracle Temple</p>
+</section>
+
+<section class="bio-wrap">
+  <div>
+    <div class="bio-photo-box">
+      <div class="bio-photo-inner">
+        <div class="bio-photo-initials">T.O.</div>
+        <div class="bio-photo-note">Photo Coming Soon</div>
+      </div>
+    </div>
+    <div class="bio-titles">
+      <div class="bio-name">Pastor Elder Terence Oliver</div>
+      <div class="bio-role">Senior Pastor, Miracle Temple</div>
+    </div>
+  </div>
+
+  <div class="bio-content">
+    <span class="section-label">His Story</span>
+    <h2>A Life Devoted to Ministry</h2>
+
+    <div class="bio-section">
+      <h3>The Call to Ministry</h3>
+      <p>Pastor Elder Terence Oliver answered the call to ministry at his uncle's church, Golden Gate, in New Albany, Mississippi. It was there that his journey in service to the church truly began, shaped by years of faithfulness in whatever role was needed.</p>
+    </div>
+
+    <div class="bio-section">
+      <h3>Faithful in the Small Things</h3>
+      <p>Long before stepping into the pulpit as Pastor, Terence Oliver served Golden Gate Church in nearly every capacity imaginable. He served with YPWW, taught Sunday school, and went on to serve as Sunday School Superintendent. He led as Choir President, and even tended the church grounds as caretaker.</p>
+      <div class="bio-quote">"Wherever there was a need, I did it."</div>
+      <p>That spirit of humble, willing service became the foundation for the ministry he would go on to lead.</p>
+    </div>
+
+    <div class="bio-section">
+      <h3>Preparing for the Work</h3>
+      <p>Pastor Oliver furthered his ministry training at Mississippi Northern Bible School, where he earned a certificate of completion in Bible study and received his Elder License &mdash; equipping him for the pastoral calling ahead.</p>
+    </div>
+
+    <div class="bio-section">
+      <h3>Leading Miracle Temple</h3>
+      <p>On July 18, 2021, Terence Oliver was appointed Pastor of Miracle Temple in Byhalia, Mississippi, where he continues to lead the congregation in faith, love, and purpose to this day.</p>
+    </div>
+
+    <div class="bio-section">
+      <h3>Family</h3>
+      <p>Pastor Oliver has been married to First Lady Marieta Oliver since March 24, 1990. Together they have three daughters: Megan, Marissa, and Monique Oliver.</p>
+    </div>
+  </div>
+</section>
+
+<div class="scripture-banner">
+  <p class="scripture-text">"I can do all things through Christ who strengthens me."</p>
+  <p class="scripture-ref">Philippians 4:13</p>
+</div>
+
+<div class="bio-cta">
+  <a href="contact.html" class="btn-primary">Plan Your Visit This Sunday</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">&#10022; Miracle Temple</span>
+      <p class="footer-tagline">A place where faith comes alive, miracles happen, and community is built on the love of Christ.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Service Times</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="give.html">Online Giving</a></li>
+        <li><a href="blog.html">Sermon Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Find Us</div>
+      <p class="footer-address">
+        742 French Road <br/>
+        Byhalia, MS 38611<br/><br/>
+        <a href="mailto:miracletemplec@gmail.com">miracletemplec@gmail.com</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Miracle Temple. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="#" title="Facebook">f</a>
+      <a href="#" title="Instagram">in</a>
+      <a href="#" title="YouTube">yt</a>
+      <a href="#" title="X/Twitter">&#120143;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
