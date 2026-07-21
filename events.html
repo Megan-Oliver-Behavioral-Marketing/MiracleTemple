@@ -29,6 +29,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "@type": "Event",
         "name": "Youth Extravaganza: Breakout Sessions",
         "startDate": "2026-07-17T19:00:00-05:00",
+        "endDate": "2026-07-17T21:00:00-05:00",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "eventStatus": "https://schema.org/EventScheduled",
         "location": {
@@ -54,6 +55,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "@type": "Event",
         "name": "Youth Extravaganza: Cookout",
         "startDate": "2026-07-18T12:00:00-05:00",
+        "endDate": "2026-07-18T15:00:00-05:00",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "eventStatus": "https://schema.org/EventScheduled",
         "location": {
@@ -79,6 +81,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "@type": "Event",
         "name": "Youth Day",
         "startDate": "2026-07-19T12:00:00-05:00",
+        "endDate": "2026-07-19T14:00:00-05:00",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "eventStatus": "https://schema.org/EventScheduled",
         "location": {
@@ -102,6 +105,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "@type": "Event",
         "name": "Men's & Women's Day",
         "startDate": "2026-08-23T19:00:00-05:00",
+        "endDate": "2026-08-23T21:00:00-05:00",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "eventStatus": "https://schema.org/EventScheduled",
         "location": {
@@ -297,6 +301,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       font-size: 1.2rem; font-weight: 600; color: #fff; margin-bottom: 0.3rem;
     }
     .event-meta { font-size: 0.8rem; color: var(--muted); }
+
+    .add-to-cal {
+      display: flex; gap: 0.8rem; margin-top: 0.6rem;
+    }
+    .add-to-cal a {
+      font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--gold-light); text-decoration: none;
+      border-bottom: 1px solid rgba(201,168,76,0.35);
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .add-to-cal a:hover { color: var(--gold); border-color: var(--gold); }
     .event-tag {
       font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--gold); border: 1px solid rgba(201,168,76,0.3);
@@ -415,41 +430,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="event-day">17</div>
         <div class="event-month">July</div>
       </div>
-      <div>
-        <div class="event-title">Youth Extravaganza: Breakout Sessions</div>
-        <div class="event-meta">Friday &middot; 7:00 PM</div>
-      </div>
-    </div>
-    <div class="event-item">
-      <div class="event-date-box">
-        <div class="event-day">18</div>
-        <div class="event-month">July</div>
-      </div>
-      <div>
-        <div class="event-title">Youth Extravaganza: Cookout</div>
-        <div class="event-meta">Saturday &middot; 12:00 PM</div>
-      </div>
-      <div class="event-tag">Family</div>
-    </div>
-    <div class="event-item">
-      <div class="event-date-box">
-        <div class="event-day">19</div>
-        <div class="event-month">July</div>
-      </div>
-      <div>
-        <div class="event-title">Youth Day</div>
-        <div class="event-meta">Sunday &middot; After 2nd Service &middot; City Park</div>
-      </div>
-      <div class="event-tag">Sunday Service</div>
-    </div>
-    <div class="event-item">
-      <div class="event-date-box">
-        <div class="event-day">23</div>
-        <div class="event-month">Aug</div>
-      </div>
-      <div>
         <div class="event-title">Men's &amp; Women's Day</div>
         <div class="event-meta">Begins Friday &middot; All Services</div>
+        <div class="add-to-cal">
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Men%27s+%26+Women%27s+Day&dates=20260824T000000Z/20260824T020000Z&details=Men%27s+%26+Women%27s+Day+Celebration+at+Miracle+Temple&location=742+French+Road%2C+Byhalia%2C+MS+38611" target="_blank" rel="noopener">+ Google Calendar</a>
+          <a href="data:text/calendar;charset=utf8,BEGIN%3AVCALENDAR%0AVERSION%3A2.0%0ABEGIN%3AVEVENT%0ASUMMARY%3AMen%27s%20%26%20Women%27s%20Day%0ADTSTART%3A20260824T000000Z%0ADTEND%3A20260824T020000Z%0ALOCATION%3A742%20French%20Road%2C%20Byhalia%2C%20MS%2038611%0ADESCRIPTION%3AMen%27s%20%26%20Women%27s%20Day%20Celebration%20at%20Miracle%20Temple%0AEND%3AVEVENT%0AEND%3AVCALENDAR" download="mens-womens-day.ics">+ Apple/Outlook</a>
+        </div>
       </div>
       <div class="event-tag"></div>
     </div>
