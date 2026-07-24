@@ -1,0 +1,412 @@
+<!-- ============================================== -->
+<!-- THIS FILE MUST BE SAVED AS: bible-study.html  -->
+<!-- ============================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NW8M6C62');</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bible Study | Miracle Temple</title>
+  <meta name="description" content="Join Miracle Temple's Bible Study in Byhalia, MS for deep, transformative study of God's Word in a small group setting on Wednesday evenings." />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #9B6FD4;
+      --gold-light: #C9AAEE;
+      --gold-dark: #5E3A8C;
+      --deep: #0A080F;
+      --cream: #F5F3FA;
+      --mid: #14101C;
+      --text: #1E1728;
+      --muted: #6A5A82;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 4rem;
+      background: rgba(13, 10, 6, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem; letter-spacing: 0.15em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold-light); text-decoration: none;
+      transition: color 0.3s;
+      padding-bottom: 4px;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
+    .nav-cta {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem; letter-spacing: 0.12em;
+      color: var(--deep); background: var(--gold);
+      padding: 0.55rem 1.4rem; border: none; cursor: pointer;
+      text-decoration: none; transition: background 0.3s;
+    }
+    .nav-cta:hover { background: var(--gold-light); }
+
+    /* Mobile hamburger toggle button */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px; height: 18px;
+      background: none; border: none; cursor: pointer; padding: 0;
+      z-index: 200;
+    }
+    .nav-toggle span {
+      display: block; height: 2px; width: 100%;
+      background: var(--gold);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .nav-toggle.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity: 0; }
+    .nav-toggle.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .page-hero {
+      min-height: 50vh;
+      background: var(--deep);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; text-align: center;
+      padding: 10rem 2rem 4rem;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 50% 30%, rgba(201,168,76,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,168,76,0.06) 0%, transparent 60%);
+    }
+    .hero-eyebrow {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.72rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1.2rem;
+      position: relative; z-index: 1;
+    }
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      font-weight: 700; line-height: 1.1;
+      color: #fff; letter-spacing: 0.03em;
+      position: relative; z-index: 1;
+    }
+    .hero-title span { color: var(--gold); }
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+      font-style: italic; color: var(--gold-light);
+      margin-top: 1rem; max-width: 560px;
+      position: relative; z-index: 1;
+    }
+
+    .content-wrap {
+      max-width: 800px; margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+    .section-label {
+      font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem; display: block; text-align: center;
+    }
+    .content-wrap h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--deep); margin-bottom: 1.5rem; font-weight: 600;
+      text-align: center;
+    }
+    .content-wrap p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem; line-height: 1.85; color: var(--muted);
+      margin-bottom: 1.3rem; text-align: center;
+    }
+
+    .info-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;
+      margin-top: 3.5rem;
+    }
+    .info-card {
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 2rem 1.5rem; text-align: center;
+    }
+    .info-card-label {
+      font-family: 'Cinzel', serif; font-size: 0.7rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--gold-dark); margin-bottom: 0.6rem;
+    }
+    .info-card-value {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--text);
+    }
+
+    .faq-section {
+      max-width: 800px; margin: 5rem auto 0; padding: 0 2rem;
+    }
+    .faq-section h2 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--deep); margin-bottom: 2rem; font-weight: 600;
+      text-align: center;
+    }
+    .faq-item {
+      border-top: 1px solid rgba(94,58,140,0.15);
+      padding: 1.8rem 0;
+    }
+    .faq-item:last-child { border-bottom: 1px solid rgba(94,58,140,0.15); }
+    .faq-item h3 {
+      font-family: 'Cinzel', serif; font-size: 1.05rem; color: var(--gold-dark);
+      margin-bottom: 0.6rem; font-weight: 600;
+    }
+    .faq-item p {
+      font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
+      line-height: 1.75; color: var(--muted); text-align: left; margin-bottom: 0;
+    }
+    .faq-item p a {
+      color: var(--gold-dark); text-decoration: none;
+      border-bottom: 1px solid rgba(94,58,140,0.35);
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .faq-item p a:hover { color: var(--gold); border-color: var(--gold); }
+
+    .scripture-banner {
+      background: var(--gold);
+      padding: 5rem 2rem; text-align: center;
+    }
+    .scripture-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 4vw, 2.8rem);
+      font-style: italic; font-weight: 300;
+      color: var(--deep); line-height: 1.4;
+      max-width: 800px; margin: 0 auto 1rem;
+    }
+    .scripture-ref {
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem; letter-spacing: 0.2em;
+      color: var(--gold-dark);
+    }
+
+    .ministry-cta {
+      text-align: center; padding: 5rem 2rem;
+    }
+    .btn-primary {
+      font-family: 'Cinzel', serif;
+      font-size: 0.82rem; letter-spacing: 0.12em;
+      color: var(--deep); background: var(--gold);
+      padding: 1rem 2.5rem; border: none; cursor: pointer;
+      text-decoration: none; transition: all 0.3s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    footer {
+      background: #080604;
+      padding: 4rem 2rem 2rem;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    .footer-grid {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem; margin-bottom: 3rem;
+    }
+    .footer-brand .nav-logo { font-size: 1.3rem; display: block; margin-bottom: 1rem; }
+    .footer-tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; color: var(--muted); font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .footer-heading {
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem; letter-spacing: 0.2em;
+      color: var(--gold); margin-bottom: 1.2rem;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+    .footer-links a {
+      font-size: 0.85rem; color: var(--muted);
+      text-decoration: none; transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold-light); }
+    .footer-address { font-size: 0.85rem; color: var(--muted); line-height: 1.8; }
+    .footer-address a { color: var(--gold); text-decoration: none; }
+    .footer-bottom {
+      max-width: 1000px; margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-copy { font-size: 0.75rem; color: var(--muted); }
+    .footer-socials { display: flex; gap: 1.2rem; }
+    .footer-socials a {
+      width: 34px; height: 34px; border: 1px solid rgba(201,168,76,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); text-decoration: none; font-size: 0.75rem;
+      transition: all 0.3s;
+    }
+    .footer-socials a:hover { background: var(--gold); color: var(--deep); }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-toggle { display: flex; }
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 60px; left: 0; right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: rgba(10, 8, 6, 0.98);
+        border-bottom: 1px solid rgba(201,168,76,0.2);
+        padding: 0.5rem 0 1rem;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { width: 100%; text-align: center; }
+      .nav-links a { display: block; padding: 1rem 1.5rem; }
+      .nav-cta { display: none; }
+      .info-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NW8M6C62"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav>
+  <a href="index.html" class="nav-logo">&#10022; Miracle Temple</a>
+  <button class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="ministries.html" class="active">Ministries</a></li><li><a href="events.html">Events</a></li><li><a href="give.html">Give</a></li><li><a href="blog.html">Blog</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Plan a Visit</a>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <p class="hero-eyebrow">Get Involved</p>
+  <h1 class="hero-title">Bible <span>Study</span></h1>
+  <p class="hero-sub">Digging deeper into God's Word, together</p>
+</section>
+
+<section class="content-wrap">
+  <span class="section-label">Our Heart</span>
+  <h2>Rooted in the Word</h2>
+  <p>Miracle Temple's Bible Study offers deep, transformative study of God's Word in a small group setting here in Byhalia, Mississippi. It's a place to ask honest questions, wrestle with Scripture together, and grow in a faith that's grounded in truth rather than guesswork.</p>
+  <p>Whether you've studied the Bible your whole life or are just beginning to open its pages, you'll find a welcoming group ready to dig in alongside you.</p>
+
+  <div class="info-grid">
+    <div class="info-card">
+      <div class="info-card-label">Meets</div>
+      <div class="info-card-value">Wednesdays, 7:00 PM</div>
+    </div>
+    <div class="info-card">
+      <div class="info-card-label">Open To</div>
+      <div class="info-card-value">Everyone, All Ages</div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h3>Do I need to bring my own Bible?</h3>
+    <p>Feel free to bring whatever translation you're comfortable with. If you don't have one yet, we're happy to help you get connected with one before you come.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Is Bible Study open to visitors, or just members?</h3>
+    <p>Everyone is welcome, whether you've been part of Miracle Temple for years or you're just checking us out for the first time.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What if I've never studied the Bible before?</h3>
+    <p>That's completely okay. Our study is designed to be accessible for every level, from lifelong believers to those just starting their journey with Scripture.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What book or topic are you currently studying?</h3>
+    <p>Our current study rotates throughout the year. <a href="contact.html">Reach out to us</a> for what we're covering right now.</p>
+  </div>
+</section>
+
+<div class="scripture-banner">
+  <p class="scripture-text">"Study to shew thyself approved unto God, a workman that needeth not to be ashamed, rightly dividing the word of truth."</p>
+  <p class="scripture-ref">2 Timothy 2:15</p>
+</div>
+
+<div class="ministry-cta">
+  <a href="contact.html" class="btn-primary">Join Us Wednesday</a>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="nav-logo">&#10022; Miracle Temple</span>
+      <p class="footer-tagline">A place where faith comes alive, miracles happen, and community is built on the love of Christ.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Service Times</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="give.html">Online Giving</a></li>
+        <li><a href="blog.html">Sermon Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Find Us</div>
+      <p class="footer-address">
+        742 French Road <br/>
+        Byhalia, MS 38611<br/><br/>
+        <a href="mailto:miracletemplec@gmail.com">miracletemplec@gmail.com</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 Miracle Temple. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="#" title="Facebook">f</a>
+      <a href="#" title="Instagram">in</a>
+      <a href="#" title="YouTube">yt</a>
+      <a href="#" title="X/Twitter">&#120143;</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
